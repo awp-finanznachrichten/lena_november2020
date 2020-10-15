@@ -177,7 +177,8 @@ augment_raw_data <- function(dta_raw) {
     mutate(Nein_Stimmen_In_Prozent = 100 - Ja_Stimmen_In_Prozent) %>%
     mutate(Unentschieden = ifelse(Ja_Stimmen_Absolut == Nein_Stimmen_Absolut, TRUE, FALSE)) %>%
     mutate(Einstimmig_Ja = ifelse(Ja_Stimmen_In_Prozent == 100, TRUE, FALSE)) %>%
-    mutate(Einstimmig_Nein = ifelse(Ja_Stimmen_In_Prozent == 0, TRUE, FALSE))
+    mutate(Einstimmig_Nein = ifelse(Ja_Stimmen_In_Prozent == 0, TRUE, FALSE)) %>%
+    mutate(kleine_Gemeinde = ifelse(Eingelegte_Stimmzettel <= 100, TRUE, FALSE))
   
   return(dta)
 }

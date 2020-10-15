@@ -2,7 +2,7 @@
 time_start <- Sys.time()
 
 #Working Directory definieren
-setwd("C:/Users/simon/OneDrive/LENA_Project/lena")
+setwd("C:/Users/sw/OneDrive/LENA_Project/lena_november2020")
 
 ###Config: Bibliotheken laden, Pfade/Links definieren, bereits vorhandene Daten laden
 source("config.R",encoding = "UTF-8")
@@ -49,6 +49,7 @@ results$Nein_Stimmen_In_Prozent <- NA
 results$Unentschieden <- NA
 results$Einstimmig_Ja <- NA
 results$Einstimmig_Nein <- NA
+results$kleine_Gemeinde <- NA
 results$Storyboard <- NA
 results$Text_d <- "Die Resultate von dieser Gemeinde sind noch nicht bekannt."
 results$Text_f <- "Les résultats ne sont pas encore connus dans cette commune."
@@ -80,28 +81,20 @@ results <- lena_classics(results)
 
 #Check Vorlagen-ID
 
-if (vorlagen$id[i] == "6310") {
+if (vorlagen$id[i] == "6370") {
 
 hist_check <- TRUE 
-data_hist <- format_data_hist(daten_masseneinwanderung_bfs)
+data_hist <- format_data_hist(daten_kriegsmaterial_bfs)
 results <- merge(results,data_hist,all.x = TRUE)
 results <- hist_storyfinder(results)
 
 }
 
-if (vorlagen$id[i] == "6350") {
-
-hist_check <- TRUE
-data_hist <- format_data_hist(daten_gripen_bfs)
-results <- merge(results,data_hist,all.x = TRUE)
-results <- hist_storyfinder(results)
-  
-}
 
 #Vergleich innerhalb des Kantons (falls alle Daten vom Kanton vorhanden)
 
 #Check Vorlagen-ID
-if (vorlagen$id[i] == "6320" || vorlagen$id[i] == "6330" || vorlagen$id[i] == "6340") {
+if (vorlagen$id[i] == "6360") {
   
 
 #Falls mindestens ein Kanton ausgezählt -> Stories für die Kantone finden
@@ -119,7 +112,7 @@ results <- kanton_storyfinder(results)
 ###Storybuilder
 
 #Textvorlagen laden
-Textbausteine <- as.data.frame(read_excel("Data/Textbausteine_LENA_September2020.xlsx", 
+Textbausteine <- as.data.frame(read_excel("Data/Textbausteine_LENA_November2020.xlsx", 
                                                sheet = vorlagen_short[i]))
 cat("Textvorlagen geladen\n\n")
 

@@ -21,15 +21,12 @@ print("Aktuelle Abstimmungsdaten geladen\n")
 
 
 #Kurznamen Vorlagen (Verwendet im File mit den Textbausteinen)
-vorlagen_short <- c("Zuwanderung","Jagdgesetz","Bundessteuer","Erwerbsersatz","Kampfjet")
+vorlagen_short <- c("Konzernverantwortung","Kriegsgeschaefte")
 
 
 ###Vorhandene Daten laden Gripen / Masseneinwanderungsinitiative
-daten_gripen_bfs <- read_excel("Data/daten_gripen_bfs.xlsx", 
+daten_kriegsmaterial_bfs <- read_excel("Data/daten_kriegsmaterial_bfs.xlsx", 
                                skip = 10)
-daten_masseneinwanderung_bfs <- read_excel("Data/daten_masseneinwanderung_bfs.xlsx", 
-                               skip = 10)
-
 
 cat("Daten zu historischen Abstimmungen geladen\n")
 
