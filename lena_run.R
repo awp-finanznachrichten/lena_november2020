@@ -149,14 +149,23 @@ results <- rbind(results,results_notavailable) %>%
 
 ###Output generieren für Datawrapper
 
+#Output Abstimmungen Gemeinde
+
 output_dw <- results %>%
   select(Gemeinde_Nr,Ja_Stimmen_In_Prozent,Gemeinde_KT_d,Gemeinde_KT_f,Text_d,Text_f)
 
 
 write.csv(output_dw,paste0("Output/",vorlagen_short[i],"_dw.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
 
-cat(paste0("\nGenerated output for Vorlage ",vorlagen_short[i],"\n"))
+#Output Abstimmungen Kantone
+output_dw_kantone <- results %>%
+  select(Kantons_Nr,Kanton_d,Kanton_f,Ja_Stimmen_In_Prozent_Kanton) %>%
+  mutate(Nein_Stimmen_In_Prozent_Kanton = 100-Ja_Stimmen_In_Prozent_Kanton) %>%
+  unique()
 
+write.csv(output_dw_kantone,paste0("Output/",vorlagen_short[i],"_dw_kantone.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
+
+cat(paste0("\nGenerated output for Vorlage ",vorlagen_short[i],"\n"))
 }
 
 #Wie lange hat LENA gebraucht
