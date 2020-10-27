@@ -1,6 +1,7 @@
 #Zeit stoppen
 time_start <- Sys.time()
 
+
 #Working Directory definieren
 setwd("C:/Users/simon/OneDrive/LENA_Project/lena_november2020")
 

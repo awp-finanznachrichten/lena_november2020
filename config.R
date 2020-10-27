@@ -29,7 +29,7 @@ vorlagen_short <- c("Konzernverantwortung","Kriegsgeschaefte")
 kantonal_short <- c("FR_Pensionskasse","GE_Handicap")
 
 #Nummer in JSON 
-kantonal_number <- c(2,3)
+kantonal_number <- c(2,11)
 
 #Falls mehrere Vorlagen innerhalb eines Kantons, Vorlage auswählen
 kantonal_add <- c(1,1)
