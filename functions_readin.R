@@ -81,10 +81,7 @@ get_results <- function(dta_raw,
   }
   names(out) <- gsub("resultat.", "", names(out))
   names(out) <- gsub("staende.", "", names(out))
-  # if(format && level != "communal") {
-  #   print("been here")
-  #   out <- format_data(out)
-  # }
+
   return(out)
 }
 
@@ -195,6 +192,49 @@ format_data_hist <- function(results) {
   out <- na.omit(out)
   return(out)
 }
+
+#Resultate der kantonalen Abstimmungen aus JSON-File lesen
+get_results_kantonal <- function(dta_raw,
+                                 kanton_nr = 1,
+                                 abst_nr = 1,
+                                 level = "communal",
+                                 format = F,
+                                 clean_comm = T,
+                                 add_ct_nr = T) {
+  
+  
+  if(level == "communal") {
+    out <- map_df(dta_raw$kantone$vorlagen[[kanton_nr]]$gemeinden[[abst_nr]], function(x) x) %>%
+      mutate(Gemeinde_Nr = as.integer(geoLevelnummer)) %>%
+      select(-geoLevelnummer)
+    if(format) {
+      names(out) <- gsub("resultat.", "", names(out))
+      if(clean_comm) {
+        out <- treat_gemeinden(out)
+        out <- out %>% arrange(Gemeinde_Nr)
+      }
+      out <- format_data_g(out)
+    }
+    if(add_ct_nr) {
+      out <- out %>% left_join(meta_gmd_kt, by = c("Gemeinde_Nr"="Gemeinde_Nr"))
+    }
+    
+    
+    names(out) <- gsub("resultat.", "", names(out))
+    names(out) <- gsub("staende.", "", names(out))
+    
+  }
+  
+  if(level == "kantonal") {
+    
+    out <- as.numeric(dta_raw$kantone$vorlagen[[kanton_nr]]$resultat.jaStimmenInProzent[[abst_nr]])
+    
+  }
+  
+  
+  return(out)
+}
+
 
 
 

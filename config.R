@@ -17,12 +17,22 @@ print("Benötigte Bibliotheken geladen\n")
 link_json <- "https://app-prod-static-voteinfo.s3.eu-central-1.amazonaws.com/v1/ogd/sd-t-17-02-20200927-eidgAbstimmung.json" 
 json_data <- fromJSON(link_json, flatten = TRUE)
 
-print("Aktuelle Abstimmungsdaten geladen\n")
+link_json_kantone <- "https://app-prod-static-voteinfo.s3.eu-central-1.amazonaws.com/v1/ogd/sd-t-17-02-20200927-kantAbstimmung.json"
+json_data_kantone <- fromJSON(link_json_kantone, flatten = TRUE)
 
+print("Aktuelle Abstimmungsdaten geladen\n")
 
 #Kurznamen Vorlagen (Verwendet im File mit den Textbausteinen)
 vorlagen_short <- c("Konzernverantwortung","Kriegsgeschaefte")
 
+###Kurznamen und Nummern kantonale Vorlagen
+kantonal_short <- c("FR_Pensionskasse","GE_Handicap")
+
+#Nummer in JSON 
+kantonal_number <- c(2,3)
+
+#Falls mehrere Vorlagen innerhalb eines Kantons, Vorlage auswählen
+kantonal_add <- c(1,1)
 
 ###Vorhandene Daten laden Gripen / Masseneinwanderungsinitiative
 daten_kriegsmaterial_bfs <- read_excel("Data/daten_kriegsmaterial_bfs.xlsx", 
