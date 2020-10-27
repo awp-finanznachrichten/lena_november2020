@@ -80,10 +80,10 @@ results <- lena_classics(results)
 
 
 #Historischer Vergleich (falls vorhanden)
-
+View(vorlagen)
 #Check Vorlagen-ID
 
-if (vorlagen$id[i] == "6370") {
+if (vorlagen$id[i] == "6320") {
 
 hist_check <- TRUE 
 data_hist <- format_data_hist(daten_kriegsmaterial_bfs)
