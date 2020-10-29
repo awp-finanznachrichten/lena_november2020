@@ -25,12 +25,33 @@ cat(paste0("\nErmittle Daten für folgende Vorlage: ",vorlagen$text[i],"\n"))
 ###Resultate aus JSON auslesen 
 results <- get_results(json_data,i)
 
+#Daten simulieren Gemeinde!!!
+for (a in 1:nrow(results)) { 
+
+results$gebietAusgezaehlt[a] = TRUE
+
+results$jaStimmenAbsolut[a] <- sample(0:10000,1)
+results$neinStimmenAbsolut[a] <- sample(0:10000,1)
+results$gueltigeStimmen[a] <- results$jaStimmenAbsolut[a] + results$neinStimmenAbsolut[a]
+results$jaStimmenInProzent[a] <- results$jaStimmenAbsolut[a]*100/results$gueltigeStimmen[a]
+
+}
+
 #Daten anpassen Gemeinden
 results <- treat_gemeinden(results)
 results <- format_data_g(results)
 
 #Kantonsdaten hinzufügen
 results_kantone <- get_results(json_data,i,"cantonal")
+
+#Daten simulieren Kantone!!!
+for (b in 1:nrow(results_kantone)) {
+
+results_kantone$gebietAusgezaehlt[b] <- TRUE
+results_kantone$jaStimmenInProzent[b] <- runif(1,0,100)
+
+}
+
 
 Ja_Stimmen_Kanton <- results_kantone %>%
   select(Kantons_Nr,jaStimmenInProzent) %>%
@@ -83,7 +104,7 @@ results <- lena_classics(results)
 
 #Check Vorlagen-ID
 
-if (vorlagen$id[i] == "6320") {
+if (vorlagen$id[i] == "6370") {
 
 hist_check <- TRUE 
 data_hist <- format_data_hist(daten_kriegsmaterial_bfs)
@@ -180,6 +201,18 @@ for (k in 1:length(kantonal_short) ) {
   results <- get_results_kantonal(json_data_kantone,
                                   kantonal_number[k],
                                   kantonal_add[k])
+  
+  #Daten simulieren Gemeinde!!!
+  for (a in 1:nrow(results)) { 
+    
+    results$gebietAusgezaehlt[a] = TRUE
+    
+    results$jaStimmenAbsolut[a] <- sample(0:10000,1)
+    results$neinStimmenAbsolut[a] <- sample(0:10000,1)
+    results$gueltigeStimmen[a] <- results$jaStimmenAbsolut[a] + results$neinStimmenAbsolut[a]
+    results$jaStimmenInProzent[a] <- results$jaStimmenAbsolut[a]*100/results$gueltigeStimmen[a]
+    
+  }
 
   #Daten anpassen Gemeinden
   results <- treat_gemeinden(results)
@@ -192,6 +225,9 @@ for (k in 1:length(kantonal_short) ) {
                                             "kantonal")
   
   results$Ja_Stimmen_In_Prozent_Kanton <- Ja_Stimmen_Kanton
+  
+  #Simulation
+  results$Ja_Stimmen_In_Prozent_Kanton <- sample(0:100,1)
   
   #Wie viele Gemeinden sind ausgezählt?
   cat(paste0(sum(results$Gebiet_Ausgezaehlt)," Gemeinden sind ausgezählt.\n"))
@@ -226,9 +262,9 @@ for (k in 1:length(kantonal_short) ) {
   results <- normal_intro(results)
   
   
-  #Vergleich innerhalb des Kantons (falls Daten vom Kanton vorhanden)
+  #Vergleich innerhalb des Kantons (falls Daten vom Kanton vorhanden) -> Ändern von FALSE auf TRUE
   
-  if (json_data_kantone$kantone$vorlagen[[kantonal_number[k]]]$vorlageBeendet[[kantonal_add[k]]] == TRUE) {
+  if (json_data_kantone$kantone$vorlagen[[kantonal_number[k]]]$vorlageBeendet[[kantonal_add[k]]] == FALSE) {
     
     results <- kanton_storyfinder_kantonal(results)
     
@@ -279,5 +315,3 @@ for (k in 1:length(kantonal_short) ) {
 #Wie lange hat LENA gebraucht
 time_end <- Sys.time()
 print(time_end-time_start)
-
-View(results)

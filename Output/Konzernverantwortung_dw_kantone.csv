@@ -1,27 +1,27 @@
 "Kantons_Nr","Kanton_d","Kanton_f","Ja_Stimmen_In_Prozent_Kanton","Nein_Stimmen_In_Prozent_Kanton"
-1,"Zürich","Zurich",,
-2,"Bern","Berne",,
-3,"Luzern","Lucerne",,
-4,"Uri","Uri",,
-5,"Schwyz","Schwyz",,
-6,"Obwalden","Obwald",,
-7,"Nidwalden","Nidwald",,
-8,"Glarus","Glaris",,
-9,"Zug","Zoug",,
-10,"Freiburg","Fribourg",,
-11,"Solothurn","Soleure",,
-12,"Basel-Stadt","Bâle-Ville",,
-13,"Basel-Landschaft","Bâle-Campagne",,
-14,"Schaffhausen","Schaffhouse",,
-15,"Appenzell Ausserrhoden","Appenzell Rhodes-Extérieures",,
-16,"Appenzell Innerrhoden","Appenzell Rhodes-Intérieures",,
-17,"St. Gallen","Saint-Gall",,
-18,"Graubünden","Grisons",,
-19,"Aargau","Argovie",,
-20,"Thurgau","Thurgovie",,
-21,"Tessin","Tessin",,
-22,"Waadt","Vaud",,
-23,"Wallis","Valais",,
-24,"Neuenburg","Neuchâtel",,
-25,"Genf","Genève",,
-26,"Jura","Jura",,
+1,"Zürich","Zurich",2.50004422850907,97.4999557714909
+2,"Bern","Berne",13.0980824818835,86.9019175181165
+3,"Luzern","Lucerne",11.9686840334907,88.0313159665093
+4,"Uri","Uri",7.74061204865575,92.2593879513443
+5,"Schwyz","Schwyz",42.1520689735189,57.8479310264811
+6,"Obwalden","Obwald",99.8663949547336,0.133605045266449
+7,"Nidwalden","Nidwald",70.9403110435233,29.0596889564767
+8,"Glarus","Glaris",10.1011978229508,89.8988021770492
+9,"Zug","Zoug",31.1644727364182,68.8355272635818
+10,"Freiburg","Fribourg",98.2722060289234,1.72779397107661
+11,"Solothurn","Soleure",53.4390561515465,46.5609438484535
+12,"Basel-Stadt","Bâle-Ville",18.4904215857387,81.5095784142613
+13,"Basel-Landschaft","Bâle-Campagne",40.670948009938,59.329051990062
+14,"Schaffhausen","Schaffhouse",67.147414223291,32.852585776709
+15,"Appenzell Ausserrhoden","Appenzell Rhodes-Extérieures",84.9349803058431,15.0650196941569
+16,"Appenzell Innerrhoden","Appenzell Rhodes-Intérieures",44.6074442239478,55.3925557760522
+17,"St. Gallen","Saint-Gall",44.5362416794524,55.4637583205476
+18,"Graubünden","Grisons",8.65087788552046,91.3491221144795
+19,"Aargau","Argovie",26.8358469009399,73.1641530990601
+20,"Thurgau","Thurgovie",8.9534638915211,91.0465361084789
+21,"Tessin","Tessin",50.1036891480908,49.8963108519092
+22,"Waadt","Vaud",98.9855358144268,1.01446418557316
+23,"Wallis","Valais",33.9294114382938,66.0705885617062
+24,"Neuenburg","Neuchâtel",76.7380272503942,23.2619727496058
+25,"Genf","Genève",48.6185531131923,51.3814468868077
+26,"Jura","Jura",41.0612965002656,58.9387034997344
