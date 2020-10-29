@@ -1,27 +1,27 @@
 "Kantons_Nr","Kanton_d","Kanton_f","Ja_Stimmen_In_Prozent_Kanton","Nein_Stimmen_In_Prozent_Kanton"
 1,"Zürich","Zurich",,
-2,"Bern","Berne",27.3,72.7
-3,"Luzern","Lucerne",66.6,33.4
-4,"Uri","Uri",48.3,51.7
-5,"Schwyz","Schwyz",74.5,25.5
-6,"Obwalden","Obwald",25.2,74.8
-7,"Nidwalden","Nidwald",77.8,22.2
-8,"Glarus","Glaris",43.1,56.9
-9,"Zug","Zoug",27.4,72.6
-10,"Freiburg","Fribourg",3.6,96.4
-11,"Solothurn","Soleure",64.6,35.4
-12,"Basel-Stadt","Bâle-Ville",96.3,3.7
-13,"Basel-Landschaft","Bâle-Campagne",31.2,68.8
-14,"Schaffhausen","Schaffhouse",30.8,69.2
-15,"Appenzell Ausserrhoden","Appenzell Rhodes-Extérieures",10.1,89.9
-16,"Appenzell Innerrhoden","Appenzell Rhodes-Intérieures",76.9,23.1
-17,"St. Gallen","Saint-Gall",20.3,79.7
-18,"Graubünden","Grisons",10.5,89.5
-19,"Aargau","Argovie",96.9,3.09999999999999
-20,"Thurgau","Thurgovie",20.2,79.8
-21,"Tessin","Tessin",47.5,52.5
-22,"Waadt","Vaud",48.3,51.7
-23,"Wallis","Valais",1.8,98.2
-24,"Neuenburg","Neuchâtel",67.6,32.4
-25,"Genf","Genève",92.6,7.40000000000001
-26,"Jura","Jura",22.1,77.9
+2,"Bern","Berne",16.9,83.1
+3,"Luzern","Lucerne",52.7,47.3
+4,"Uri","Uri",32.1,67.9
+5,"Schwyz","Schwyz",98,2
+6,"Obwalden","Obwald",10.4,89.6
+7,"Nidwalden","Nidwald",52.5,47.5
+8,"Glarus","Glaris",42.9,57.1
+9,"Zug","Zoug",72.2,27.8
+10,"Freiburg","Fribourg",51,49
+11,"Solothurn","Soleure",50.6,49.4
+12,"Basel-Stadt","Bâle-Ville",90.9,9.1
+13,"Basel-Landschaft","Bâle-Campagne",32.9,67.1
+14,"Schaffhausen","Schaffhouse",10.8,89.2
+15,"Appenzell Ausserrhoden","Appenzell Rhodes-Extérieures",40.6,59.4
+16,"Appenzell Innerrhoden","Appenzell Rhodes-Intérieures",85.2,14.8
+17,"St. Gallen","Saint-Gall",33.7,66.3
+18,"Graubünden","Grisons",94.8,5.2
+19,"Aargau","Argovie",5.2,94.8
+20,"Thurgau","Thurgovie",34.4,65.6
+21,"Tessin","Tessin",50.1,49.9
+22,"Waadt","Vaud",53,47
+23,"Wallis","Valais",16.3,83.7
+24,"Neuenburg","Neuchâtel",53.2,46.8
+25,"Genf","Genève",10.7,89.3
+26,"Jura","Jura",1.7,98.3

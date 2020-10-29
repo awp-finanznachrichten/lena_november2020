@@ -183,7 +183,7 @@ write.csv(output_dw,paste0("Output/",vorlagen_short[i],"_dw.csv"), na = "", row.
 #Output Abstimmungen Kantone
 output_dw_kantone <- results %>%
   select(Kantons_Nr,Kanton_d,Kanton_f,Ja_Stimmen_In_Prozent_Kanton) %>%
-  mutate(Nein_Stimmen_In_Prozent_Kanton = 100-Ja_Stimmen_In_Prozent_Kanton) %>%
+  mutate(Nein_Stimmen_In_Prozent_Kanton = round(100-Ja_Stimmen_In_Prozent_Kanton,1)) %>%
   unique()
 
 write.csv(output_dw_kantone,paste0("Output/",vorlagen_short[i],"_dw_kantone.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
