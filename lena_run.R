@@ -48,7 +48,7 @@ results_kantone <- get_results(json_data,i,"cantonal")
 for (b in 1:nrow(results_kantone)) {
 
 results_kantone$gebietAusgezaehlt[b] <- TRUE
-results_kantone$jaStimmenInProzent[b] <- runif(1,0,100)
+results_kantone$jaStimmenInProzent[b] <- round(runif(1,0,100),1)
 
 }
 
@@ -228,7 +228,7 @@ for (k in 1:length(kantonal_short) ) {
   
   #Simulation
   results$Ja_Stimmen_In_Prozent_Kanton <- sample(0:100,1)
-  
+
   #Wie viele Gemeinden sind ausgezählt?
   cat(paste0(sum(results$Gebiet_Ausgezaehlt)," Gemeinden sind ausgezählt.\n"))
   

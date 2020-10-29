@@ -1,27 +1,27 @@
 "Kantons_Nr","Kanton_d","Kanton_f","Ja_Stimmen_In_Prozent_Kanton","Nein_Stimmen_In_Prozent_Kanton"
-1,"Zürich","Zurich",20.7146357279271,79.2853642720729
-2,"Bern","Berne",48.3795601176098,51.6204398823902
-3,"Luzern","Lucerne",97.156696440652,2.84330355934799
-4,"Uri","Uri",94.1184210823849,5.88157891761512
-5,"Schwyz","Schwyz",30.2449770038947,69.7550229961053
-6,"Obwalden","Obwald",38.9317380497232,61.0682619502768
-7,"Nidwalden","Nidwald",14.0501964604482,85.9498035395518
-8,"Glarus","Glaris",93.0624310625717,6.9375689374283
-9,"Zug","Zoug",98.4136519255117,1.58634807448834
-10,"Freiburg","Fribourg",85.0779033498839,14.9220966501161
-11,"Solothurn","Soleure",73.0707144364715,26.9292855635285
-12,"Basel-Stadt","Bâle-Ville",0.367053062655032,99.632946937345
-13,"Basel-Landschaft","Bâle-Campagne",18.9478515880182,81.0521484119818
-14,"Schaffhausen","Schaffhouse",17.8024057066068,82.1975942933932
-15,"Appenzell Ausserrhoden","Appenzell Rhodes-Extérieures",28.913041902706,71.086958097294
-16,"Appenzell Innerrhoden","Appenzell Rhodes-Intérieures",0.364902568981051,99.6350974310189
-17,"St. Gallen","Saint-Gall",0.997759285382926,99.0022407146171
-18,"Graubünden","Grisons",59.394310368225,40.605689631775
-19,"Aargau","Argovie",19.7085743071511,80.2914256928489
-20,"Thurgau","Thurgovie",0.834891991689801,99.1651080083102
-21,"Tessin","Tessin",76.8486290238798,23.1513709761202
-22,"Waadt","Vaud",63.9192522503436,36.0807477496564
-23,"Wallis","Valais",81.6662292694673,18.3337707305327
-24,"Neuenburg","Neuchâtel",70.6133645260707,29.3866354739293
-25,"Genf","Genève",85.8751127263531,14.1248872736469
-26,"Jura","Jura",6.20256937108934,93.7974306289107
+1,"Zürich","Zurich",20.7,79.3
+2,"Bern","Berne",48.4,51.6
+3,"Luzern","Lucerne",97.2,2.8
+4,"Uri","Uri",94.1,5.90000000000001
+5,"Schwyz","Schwyz",30.2,69.8
+6,"Obwalden","Obwald",38.9,61.1
+7,"Nidwalden","Nidwald",14.1,85.9
+8,"Glarus","Glaris",93.1,6.90000000000001
+9,"Zug","Zoug",98.4,1.59999999999999
+10,"Freiburg","Fribourg",85.1,14.9
+11,"Solothurn","Soleure",73.1,26.9
+12,"Basel-Stadt","Bâle-Ville",0.4,99.6
+13,"Basel-Landschaft","Bâle-Campagne",18.9,81.1
+14,"Schaffhausen","Schaffhouse",17.8,82.2
+15,"Appenzell Ausserrhoden","Appenzell Rhodes-Extérieures",28.9,71.1
+16,"Appenzell Innerrhoden","Appenzell Rhodes-Intérieures",0.4,99.6
+17,"St. Gallen","Saint-Gall",1,99
+18,"Graubünden","Grisons",59.4,40.6
+19,"Aargau","Argovie",19.7,80.3
+20,"Thurgau","Thurgovie",0.8,99.2
+21,"Tessin","Tessin",76.8,23.2
+22,"Waadt","Vaud",63.9,36.1
+23,"Wallis","Valais",81.7,18.3
+24,"Neuenburg","Neuchâtel",70.6,29.4
+25,"Genf","Genève",85.9,14.1
+26,"Jura","Jura",6.2,93.8
