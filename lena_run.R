@@ -45,7 +45,7 @@ results <- format_data_g(results)
 results_kantone <- get_results(json_data,i,"cantonal")
 
 #Daten simulieren Kantone!!!
-for (b in 1:nrow(results_kantone)) {
+for (b in 2:nrow(results_kantone)) {
 
 results_kantone$gebietAusgezaehlt[b] <- TRUE
 results_kantone$jaStimmenInProzent[b] <- round(runif(1,0,100),1)
@@ -190,7 +190,6 @@ write.csv(output_dw_kantone,paste0("Output/",vorlagen_short[i],"_dw_kantone.csv"
 
 cat(paste0("\nGenerated output for Vorlage ",vorlagen_short[i],"\n"))
 }
-
 
 ###Kantonale Abstimmungen###
 
