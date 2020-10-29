@@ -1,27 +1,27 @@
 "Kantons_Nr","Kanton_d","Kanton_f","Ja_Stimmen_In_Prozent_Kanton","Nein_Stimmen_In_Prozent_Kanton"
-1,"Zürich","Zurich",34.254178872,65.745821128
-2,"Bern","Berne",38.646889417,61.353110583
-3,"Luzern","Lucerne",40.182993865,59.817006135
-4,"Uri","Uri",49.562515851,50.437484149
-5,"Schwyz","Schwyz",53.356658974,46.643341026
-6,"Obwalden","Obwald",49.082851854,50.917148146
-7,"Nidwalden","Nidwald",47.628429296,52.371570704
-8,"Glarus","Glaris",50.468782554,49.531217446
-9,"Zug","Zoug",39.639818322,60.360181678
-10,"Freiburg","Fribourg",35.439555914,64.560444086
-11,"Solothurn","Soleure",41.541012538,58.458987462
-12,"Basel-Stadt","Bâle-Ville",25.35383979,74.64616021
-13,"Basel-Landschaft","Bâle-Campagne",38.597409884,61.402590116
-14,"Schaffhausen","Schaffhouse",43.373863573,56.626136427
-15,"Appenzell Ausserrhoden","Appenzell Rhodes-Extérieures",43.551745254,56.448254746
-16,"Appenzell Innerrhoden","Appenzell Rhodes-Intérieures",54.291623578,45.708376422
-17,"St. Gallen","Saint-Gall",43.273731511,56.726268489
-18,"Graubünden","Grisons",40.870099487,59.129900513
-19,"Aargau","Argovie",42.426886754,57.573113246
-20,"Thurgau","Thurgovie",44.347879432,55.652120568
-21,"Tessin","Tessin",53.135135954,46.864864046
-22,"Waadt","Vaud",29.066727506,70.933272494
-23,"Wallis","Valais",37.946463338,62.053536662
-24,"Neuenburg","Neuchâtel",28.876507304,71.123492696
-25,"Genf","Genève",31.028042713,68.971957287
-26,"Jura","Jura",31.848295727,68.151704273
+1,"Zürich","Zurich",,
+2,"Bern","Berne",,
+3,"Luzern","Lucerne",,
+4,"Uri","Uri",,
+5,"Schwyz","Schwyz",,
+6,"Obwalden","Obwald",,
+7,"Nidwalden","Nidwald",,
+8,"Glarus","Glaris",,
+9,"Zug","Zoug",,
+10,"Freiburg","Fribourg",,
+11,"Solothurn","Soleure",,
+12,"Basel-Stadt","Bâle-Ville",,
+13,"Basel-Landschaft","Bâle-Campagne",,
+14,"Schaffhausen","Schaffhouse",,
+15,"Appenzell Ausserrhoden","Appenzell Rhodes-Extérieures",,
+16,"Appenzell Innerrhoden","Appenzell Rhodes-Intérieures",,
+17,"St. Gallen","Saint-Gall",,
+18,"Graubünden","Grisons",,
+19,"Aargau","Argovie",,
+20,"Thurgau","Thurgovie",,
+21,"Tessin","Tessin",,
+22,"Waadt","Vaud",,
+23,"Wallis","Valais",,
+24,"Neuenburg","Neuchâtel",,
+25,"Genf","Genève",,
+26,"Jura","Jura",,

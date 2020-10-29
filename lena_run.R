@@ -80,7 +80,7 @@ results <- lena_classics(results)
 
 
 #Historischer Vergleich (falls vorhanden)
-View(vorlagen)
+
 #Check Vorlagen-ID
 
 if (vorlagen$id[i] == "6320") {
@@ -180,11 +180,11 @@ for (k in 1:length(kantonal_short) ) {
   results <- get_results_kantonal(json_data_kantone,
                                   kantonal_number[k],
                                   kantonal_add[k])
-  
+
   #Daten anpassen Gemeinden
   results <- treat_gemeinden(results)
   results <- format_data_g(results)
-  
+
   #Kantonsergebnis hinzufügen
   Ja_Stimmen_Kanton <- get_results_kantonal(json_data_kantone,
                                             kantonal_number[k],
@@ -217,7 +217,7 @@ for (k in 1:length(kantonal_short) ) {
   results <- results[results$Gebiet_Ausgezaehlt == TRUE,]
   
   #Sind schon Daten vorhanden?
-  #if (nrow(results) > 0) {
+  if (nrow(results) > 0) {
   
   #Daten anpassen
   results <- augment_raw_data(results)
@@ -251,6 +251,7 @@ for (k in 1:length(kantonal_short) ) {
   #Print out texts
   #cat(paste0(results$Gemeinde_d,"\n",results$Text_d,"\n\n",results$Text_f,collapse="\n\n"))
   
+  }
   ###Ausgezählte und nicht ausgezählte Gemeinden wieder zusammenführen -> Immer gleiches Format für Datawrapper
   if (nrow(results_notavailable) > 0) {
     
@@ -278,3 +279,5 @@ for (k in 1:length(kantonal_short) ) {
 #Wie lange hat LENA gebraucht
 time_end <- Sys.time()
 print(time_end-time_start)
+
+View(results)

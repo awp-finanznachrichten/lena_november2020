@@ -14,25 +14,26 @@ library(readxl)
 print("Benötigte Bibliotheken geladen\n")
 
 #Link zu JSON-Daten / Daten einlesen
-link_json <- "https://app-prod-static-voteinfo.s3.eu-central-1.amazonaws.com/v1/ogd/sd-t-17-02-20200927-eidgAbstimmung.json" 
+link_json <- "https://app-prod-static-voteinfo.s3.eu-central-1.amazonaws.com/v1/ogd/sd-t-17-02-20201129-eidgAbstimmung.json" 
 json_data <- fromJSON(link_json, flatten = TRUE)
 
-link_json_kantone <- "https://app-prod-static-voteinfo.s3.eu-central-1.amazonaws.com/v1/ogd/sd-t-17-02-20200927-kantAbstimmung.json"
+link_json_kantone <- "https://app-prod-static-voteinfo.s3.eu-central-1.amazonaws.com/v1/ogd/sd-t-17-02-20201129-kantAbstimmung.json"
 json_data_kantone <- fromJSON(link_json_kantone, flatten = TRUE)
 
+View(json_data_kantone)
 print("Aktuelle Abstimmungsdaten geladen\n")
 
 #Kurznamen Vorlagen (Verwendet im File mit den Textbausteinen)
 vorlagen_short <- c("Konzernverantwortung","Kriegsgeschaefte")
 
 ###Kurznamen und Nummern kantonale Vorlagen
-kantonal_short <- c("FR_Pensionskasse","GE_Handicap")
+kantonal_short <- c("FR_Pensionskasse","GE_Handicap","GE_Avusy")
 
 #Nummer in JSON 
-kantonal_number <- c(2,11)
+kantonal_number <- c(4,11,11)
 
 #Falls mehrere Vorlagen innerhalb eines Kantons, Vorlage auswählen
-kantonal_add <- c(1,1)
+kantonal_add <- c(1,1,2)
 
 ###Vorhandene Daten laden Gripen / Masseneinwanderungsinitiative
 daten_kriegsmaterial_bfs <- read_excel("Data/daten_kriegsmaterial_bfs.xlsx", 
@@ -46,4 +47,4 @@ meta_gmd_kt <- read_csv("Data/MASTERFILE_GDE.csv")
 cat("Metadaten zu Gemeinden und Kantonen geladen\n")
 
 
-
+json_data_kantone$kantone
