@@ -190,7 +190,7 @@ output_dw_kantone <- results %>%
 
 for (y in 1:nrow(output_dw_kantone)) {
 
-if (is.na(output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]) == TRUE) {
+if (is.na(output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]) == TRUE) { 
   
   output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y] <- 50
   output_dw_kantone$Text_de[y] <- "Die Resultate von diesem Kanton sind noch nicht bekannt."
