@@ -183,8 +183,28 @@ write.csv(output_dw,paste0("Output/",vorlagen_short[i],"_dw.csv"), na = "", row.
 #Output Abstimmungen Kantone
 output_dw_kantone <- results %>%
   select(Kantons_Nr,Kanton_d,Kanton_f,Ja_Stimmen_In_Prozent_Kanton) %>%
-  mutate(Nein_Stimmen_In_Prozent_Kanton = round(100-Ja_Stimmen_In_Prozent_Kanton,1)) %>%
+  mutate(Nein_Stimmen_In_Prozent_Kanton = round(100-Ja_Stimmen_In_Prozent_Kanton,1),
+         Text_de = NA,
+         Text_fr = NA) %>%
   unique()
+
+for (y in 1:nrow(output_dw_kantone)) {
+
+if (is.na(output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]) == TRUE) {
+  
+  output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y] <- 50
+  output_dw_kantone$Text_de[y] <- "Die Resultate von diesem Kanton sind noch nicht bekannt."
+  output_dw_kantone$Text_fr[y] <- "Les résultats ne sont pas encore connus dans ce canton."
+} else {
+  
+  output_dw_kantone$Text_de[y] <- paste0("Ja-Anteil: ",output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]," % <br>",
+                                      "Nein-Anteil: ",output_dw_kantone$Nein_Stimmen_In_Prozent_Kanton[y]," %")
+  output_dw_kantone$Text_fr[y] <- paste0("purcentage de oui: ",output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]," % <br>",
+                                         "pourcentage de non: ",output_dw_kantone$Nein_Stimmen_In_Prozent_Kanton[y]," %") 
+  
+}  
+  
+}  
 
 write.csv(output_dw_kantone,paste0("Output/",vorlagen_short[i],"_dw_kantone.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
 
