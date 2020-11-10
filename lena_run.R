@@ -335,3 +335,5 @@ for (k in 1:length(kantonal_short) ) {
 #Wie lange hat LENA gebraucht
 time_end <- Sys.time()
 print(time_end-time_start)
+
+View(results)
