@@ -25,33 +25,12 @@ cat(paste0("\nErmittle Daten für folgende Vorlage: ",vorlagen$text[i],"\n"))
 ###Resultate aus JSON auslesen 
 results <- get_results(json_data,i)
 
-#Daten simulieren Gemeinde!!!
-#for (a in 1:nrow(results)) { 
-
-#results$gebietAusgezaehlt[a] = TRUE
-
-#results$jaStimmenAbsolut[a] <- sample(0:10000,1)
-#results$neinStimmenAbsolut[a] <- sample(0:10000,1)
-#results$gueltigeStimmen[a] <- results$jaStimmenAbsolut[a] + results$neinStimmenAbsolut[a]
-#results$jaStimmenInProzent[a] <- results$jaStimmenAbsolut[a]*100/results$gueltigeStimmen[a]
-
-#}
-
 #Daten anpassen Gemeinden
 results <- treat_gemeinden(results)
 results <- format_data_g(results)
 
 #Kantonsdaten hinzufügen
 results_kantone <- get_results(json_data,i,"cantonal")
-
-#Daten simulieren Kantone!!!
-#for (b in 1:nrow(results_kantone)) {
-
-#results_kantone$gebietAusgezaehlt[b] <- TRUE
-#results_kantone$jaStimmenInProzent[b] <- round(runif(1,0,100),1)
-
-#}
-
 
 Ja_Stimmen_Kanton <- results_kantone %>%
   select(Kantons_Nr,jaStimmenInProzent) %>%
@@ -180,6 +159,7 @@ output_dw <- results %>%
 
 write.csv(output_dw,paste0("Output/",vorlagen_short[i],"_dw.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
 
+
 #Output Abstimmungen Kantone
 output_dw_kantone <- results %>%
   select(Kantons_Nr,Kanton_d,Kanton_f,Ja_Stimmen_In_Prozent_Kanton) %>%
@@ -222,18 +202,6 @@ for (k in 1:length(kantonal_short) ) {
                                   kantonal_number[k],
                                   kantonal_add[k])
   
-  #Daten simulieren Gemeinde!!!
-  for (a in 1:nrow(results)) { 
-    
-    results$gebietAusgezaehlt[a] = TRUE
-    
-    results$jaStimmenAbsolut[a] <- sample(0:10000,1)
-    results$neinStimmenAbsolut[a] <- sample(0:10000,1)
-    results$gueltigeStimmen[a] <- results$jaStimmenAbsolut[a] + results$neinStimmenAbsolut[a]
-    results$jaStimmenInProzent[a] <- results$jaStimmenAbsolut[a]*100/results$gueltigeStimmen[a]
-    
-  }
-
   #Daten anpassen Gemeinden
   results <- treat_gemeinden(results)
   results <- format_data_g(results)
@@ -245,9 +213,6 @@ for (k in 1:length(kantonal_short) ) {
                                             "kantonal")
   
   results$Ja_Stimmen_In_Prozent_Kanton <- Ja_Stimmen_Kanton
-  
-  #Simulation
-  #results$Ja_Stimmen_In_Prozent_Kanton <- sample(0:100,1)
 
   #Wie viele Gemeinden sind ausgezählt?
   cat(paste0(sum(results$Gebiet_Ausgezaehlt)," Gemeinden sind ausgezählt.\n"))
@@ -335,5 +300,3 @@ for (k in 1:length(kantonal_short) ) {
 #Wie lange hat LENA gebraucht
 time_end <- Sys.time()
 print(time_end-time_start)
-
-View(results)
