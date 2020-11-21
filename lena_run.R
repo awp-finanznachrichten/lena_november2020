@@ -156,7 +156,24 @@ results <- rbind(results,results_notavailable) %>%
 output_dw <- results %>%
   select(Gemeinde_Nr,Ja_Stimmen_In_Prozent,Gemeinde_KT_d,Gemeinde_KT_f,Text_d,Text_f)
 
+#Anpassungen (Ticino Verzasca)
+gemeinde_adapt <- output_dw[output_dw$Gemeinde_Nr == 5399,] 
+gemeinde_adapt$Gemeinde_Nr[1] <- 5102
+output_dw <- rbind(output_dw,gemeinde_adapt)
 
+gemeinde_adapt$Gemeinde_Nr[1] <- 5095
+output_dw <- rbind(output_dw,gemeinde_adapt)
+
+gemeinde_adapt$Gemeinde_Nr[1] <- 5105
+output_dw <- rbind(output_dw,gemeinde_adapt)
+
+gemeinde_adapt$Gemeinde_Nr[1] <- 5129
+output_dw <- rbind(output_dw,gemeinde_adapt)
+
+gemeinde_adapt$Gemeinde_Nr[1] <- 5135
+output_dw <- rbind(output_dw,gemeinde_adapt)
+
+#Output speichern
 write.csv(output_dw,paste0("Output/",vorlagen_short[i],"_dw.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
 
 
@@ -191,6 +208,9 @@ write.csv(output_dw_kantone,paste0("Output/",vorlagen_short[i],"_dw_kantone.csv"
 
 cat(paste0("\nGenerated output for Vorlage ",vorlagen_short[i],"\n"))
 }
+
+
+
 
 ###Kantonale Abstimmungen###
 
