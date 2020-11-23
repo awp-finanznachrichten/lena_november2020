@@ -36,6 +36,7 @@ normal_intro <- function(dta) {
   return(out)
 }
 
+
 lena_classics <- function(dta) {
   
   selection <- rank(dta$Ja_Stimmen_In_Prozent)==1

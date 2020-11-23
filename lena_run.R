@@ -3,7 +3,7 @@ time_start <- Sys.time()
 
 
 #Working Directory definieren
-setwd("C:/Users/simon/OneDrive/LENA_Project/lena_november2020")
+setwd("C:/Users/sw/OneDrive/LENA_Project/lena_november2020")
 
 ###Config: Bibliotheken laden, Pfade/Links definieren, bereits vorhandene Daten laden
 source("config.R",encoding = "UTF-8")
@@ -278,7 +278,29 @@ for (k in 1:length(kantonal_short) ) {
   
   #Intros generieren
   results <- normal_intro(results)
+
+  #Intro Spezialfall Avusy
   
+  if (kantonal_short[k] == "GE_Avusy") {
+    
+   for (s in 1:nrow(results)) {
+     
+    if ( (results$Gemeinde_Nr[s] == 6604) & (results$Ja_Stimmen_Absolut > results$Nein_Stimmen_Absolut) ) {
+      
+      results$Storyboard[s] <- "Intro_Ja_Avusy"
+      
+    }
+     
+     if ( (results$Gemeinde_Nr[s] == 6604) & (results$Ja_Stimmen_Absolut < results$Nein_Stimmen_Absolut) ) {
+       
+       results$Storyboard[s] <- "Intro_Nein_Avusy"
+       
+     } 
+     
+   }
+    
+  }
+
   
   #Vergleich innerhalb des Kantons (falls Daten vom Kanton vorhanden) -> Ändern von FALSE auf TRUE
   
@@ -332,5 +354,3 @@ for (k in 1:length(kantonal_short) ) {
 #Wie lange hat LENA gebraucht
 time_end <- Sys.time()
 print(time_end-time_start)
-
-
