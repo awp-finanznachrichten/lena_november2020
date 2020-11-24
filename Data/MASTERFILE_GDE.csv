@@ -213,6 +213,7 @@ Gemeinde_Nr,Kanton_Short,Gemeinde_d,Gemeinde_f,Gemeinde_KT_d,Gemeinde_KT_f,Kanto
 386,BE,Dotzigen,Dotzigen,Dotzigen BE,Dotzigen (BE),Bern,Berne,2
 387,BE,Lengnau BE,Longeau,Lengnau BE,Longeau (BE),Bern,Berne,2
 388,BE,Leuzigen,Leuzigen,Leuzigen BE,Leuzigen (BE),Bern,Berne,2
+389,BE,Meienried,Meienried,Meienried BE,Meienried (BE),Bern,Berne,2
 390,BE,Meinisberg,Meinisberg,Meinisberg BE,Meinisberg (BE),Bern,Berne,2
 391,BE,Oberwil bei Büren,Oberwil bei Büren,Oberwil bei Büren BE,Oberwil bei Büren (BE),Bern,Berne,2
 392,BE,Pieterlen,Perles,Pieterlen BE,Perles (BE),Bern,Berne,2
@@ -225,6 +226,7 @@ Gemeinde_Nr,Kanton_Short,Gemeinde_d,Gemeinde_f,Gemeinde_KT_d,Gemeinde_KT_f,Kanto
 405,BE,Ersigen,Ersigen,Ersigen BE,Ersigen (BE),Bern,Berne,2
 406,BE,Hasle bei Burgdorf,Hasle bei Burgdorf,Hasle bei Burgdorf BE,Hasle bei Burgdorf (BE),Bern,Berne,2
 407,BE,Heimiswil,Heimiswil,Heimiswil BE,Heimiswil (BE),Bern,Berne,2
+407,BE,Hellsau,Hellsau,Hellsau BE,Hellsau (BE),Bern,Berne,2
 409,BE,Hindelbank,Hindelbank,Hindelbank BE,Hindelbank (BE),Bern,Berne,2
 410,BE,Höchstetten,Höchstetten,Höchstetten BE,Höchstetten (BE),Bern,Berne,2
 411,BE,Kernenried,Kernenried,Kernenried BE,Kernenried (BE),Bern,Berne,2
@@ -236,6 +238,7 @@ Gemeinde_Nr,Kanton_Short,Gemeinde_d,Gemeinde_f,Gemeinde_KT_d,Gemeinde_KT_f,Kanto
 418,BE,Oberburg,Oberburg,Oberburg BE,Oberburg (BE),Bern,Berne,2
 420,BE,Rüdtligen-Alchenflüh,Rüdtligen-Alchenflüh,Rüdtligen-Alchenflüh BE,Rüdtligen-Alchenflüh (BE),Bern,Berne,2
 421,BE,Rumendingen,Rumendingen,Rumendingen BE,Rumendingen (BE),Bern,Berne,2
+421,BE,Rüti bei Lyssach,Rüti bei Lyssach,Rüti bei Lyssach BE,Rüti bei Lyssach (BE),Bern,Berne,2
 423,BE,Willadingen,Willadingen,Willadingen BE,Willadingen (BE),Bern,Berne,2
 424,BE,Wynigen,Wynigen,Wynigen BE,Wynigen (BE),Bern,Berne,2
 431,BE,Corgémont,Corgémont,Corgémont BE,Corgémont (BE),Bern,Berne,2
@@ -267,6 +270,7 @@ Gemeinde_Nr,Kanton_Short,Gemeinde_d,Gemeinde_f,Gemeinde_KT_d,Gemeinde_KT_f,Kanto
 501,BE,Tschugg,Tschugg,Tschugg BE,Tschugg (BE),Bern,Berne,2
 502,BE,Vinelz,Vinelz,Vinelz BE,Vinelz (BE),Bern,Berne,2
 533,BE,Bätterkinden,Bätterkinden,Bätterkinden BE,Bätterkinden (BE),Bern,Berne,2
+535,BE,Deisswil bei Münchenbuchsee,Deisswil bei Münchenbuchsee,Deisswil bei Münchenbuchsee BE,Deisswil bei Münchenbuchsee (BE),Bern,Berne,2
 536,BE,Diemerswil,Diemerswil,Diemerswil BE,Diemerswil (BE),Bern,Berne,2
 538,BE,Fraubrunnen,Fraubrunnen,Fraubrunnen BE,Fraubrunnen (BE),Bern,Berne,2
 540,BE,Jegenstorf,Jegenstorf,Jegenstorf BE,Jegenstorf (BE),Bern,Berne,2
@@ -423,6 +427,7 @@ Gemeinde_Nr,Kanton_Short,Gemeinde_d,Gemeinde_f,Gemeinde_KT_d,Gemeinde_KT_f,Kanto
 869,BE,Kaufdorf,Kaufdorf,Kaufdorf BE,Kaufdorf (BE),Bern,Berne,2
 870,BE,Kehrsatz,Kehrsatz,Kehrsatz BE,Kehrsatz (BE),Bern,Berne,2
 872,BE,Kirchdorf BE,Kirchdorf (BE),Kirchdorf BE,Kirchdorf (BE),Bern,Berne,2
+877,BE,Niedermuhlern,Niedermuhlern,Niedermuhlern BE,Niedermuhlern (BE),Bern,Berne,2
 879,BE,Riggisberg,Riggisberg,Riggisberg BE,Riggisberg (BE),Bern,Berne,2
 880,BE,Rüeggisberg,Rüeggisberg,Rüeggisberg BE,Rüeggisberg (BE),Bern,Berne,2
 881,BE,Rümligen,Rümligen,Rümligen BE,Rümligen (BE),Bern,Berne,2
