@@ -83,7 +83,7 @@ results <- lena_classics(results)
 
 #Check Vorlagen-ID
 
-if (vorlagen$id[i] == "6320") { #6370
+if (vorlagen$id[i] == "6370") { #6320
 
 hist_check <- TRUE 
 data_hist <- format_data_hist(daten_kriegsmaterial_bfs)
@@ -96,7 +96,7 @@ results <- hist_storyfinder(results)
 #Vergleich innerhalb des Kantons (falls alle Daten vom Kanton vorhanden)
 
 #Check Vorlagen-ID
-if (vorlagen$id[i] == "6310") { #6360
+if (vorlagen$id[i] == "6360") { #6310
   
 
 #Falls mindestens ein Kanton ausgezählt -> Stories für die Kantone finden
@@ -148,6 +148,9 @@ results <- rbind(results,results_notavailable) %>%
 
 }
 
+#Texte speichern
+#library(xlsx)
+#write.xlsx(results,paste0(vorlagen_short[i],"_texte.xlsx"),row.names = FALSE)
 
 ###Output generieren für Datawrapper
 
@@ -222,18 +225,6 @@ for (k in 1:length(kantonal_short) ) {
                                   kantonal_number[k],
                                   kantonal_add[k])
   
-  #Daten simulieren Gemeinde!!!
-  #for (a in 1:nrow(results)) { 
-  
-  #results$gebietAusgezaehlt[a] = TRUE
-  
-  #results$jaStimmenAbsolut[a] <- sample(0:10000,1)
-  #results$neinStimmenAbsolut[a] <- sample(0:10000,1)
-  #results$gueltigeStimmen[a] <- results$jaStimmenAbsolut[a] + results$neinStimmenAbsolut[a]
-  #results$jaStimmenInProzent[a] <- results$jaStimmenAbsolut[a]*100/results$gueltigeStimmen[a]
-  
-  #}
-  
   
   #Daten anpassen Gemeinden
   results <- treat_gemeinden(results)
@@ -278,20 +269,20 @@ for (k in 1:length(kantonal_short) ) {
   
   #Intros generieren
   results <- normal_intro(results)
-
+ 
   #Intro Spezialfall Avusy
   
   if (kantonal_short[k] == "GE_Avusy") {
     
    for (s in 1:nrow(results)) {
      
-    if ( (results$Gemeinde_Nr[s] == 6604) & (results$Ja_Stimmen_Absolut > results$Nein_Stimmen_Absolut) ) {
+    if ( (results$Gemeinde_Nr[s] == 6604) & (results$Ja_Stimmen_Absolut[s] > results$Nein_Stimmen_Absolut[s]) ) {
       
       results$Storyboard[s] <- "Intro_Ja_Avusy"
       
     }
      
-     if ( (results$Gemeinde_Nr[s] == 6604) & (results$Ja_Stimmen_Absolut < results$Nein_Stimmen_Absolut) ) {
+     if ( (results$Gemeinde_Nr[s] == 6604) & (results$Ja_Stimmen_Absolut[s] < results$Nein_Stimmen_Absolut[s]) ) {
        
        results$Storyboard[s] <- "Intro_Nein_Avusy"
        
@@ -300,7 +291,6 @@ for (k in 1:length(kantonal_short) ) {
    }
     
   }
-
   
   #Vergleich innerhalb des Kantons (falls Daten vom Kanton vorhanden) -> Ändern von FALSE auf TRUE
   
@@ -337,6 +327,10 @@ for (k in 1:length(kantonal_short) ) {
       arrange(Gemeinde_Nr)
     
   }
+  
+  #Texte speichern
+  #library(xlsx)
+  #write.xlsx(results,paste0(kantonal_short[k],"_texte.xlsx"))
   
   ###Output generieren für Datawrapper
 

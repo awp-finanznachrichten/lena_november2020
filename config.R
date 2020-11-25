@@ -34,7 +34,7 @@ kantonal_short <- c("FR_Pensionskasse","GE_Handicap","GE_Avusy")
 kantonal_number <- c(4,11,11) #3,13,13
 
 #Falls mehrere Vorlagen innerhalb eines Kantons, Vorlage auswählen
-kantonal_add <- c(1,1,2) # 1,1,1
+kantonal_add <- c(1,1,2) #  1,1,1
 
 ###Vorhandene Daten laden Gripen / Masseneinwanderungsinitiative
 daten_kriegsmaterial_bfs <- read_excel("Data/daten_kriegsmaterial_bfs.xlsx", 
