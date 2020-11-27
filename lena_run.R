@@ -40,7 +40,6 @@ Ja_Stimmen_Kanton <- results_kantone %>%
 
 results <- merge(results,Ja_Stimmen_Kanton)
 
-
 #Wie viele Gemeinden sind ausgezählt?
 cat(paste0(sum(results$Gebiet_Ausgezaehlt)," Gemeinden sind ausgezählt.\n"))
 
