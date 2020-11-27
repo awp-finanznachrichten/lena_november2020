@@ -25,12 +25,32 @@ cat(paste0("\nErmittle Daten für folgende Vorlage: ",vorlagen$text[i],"\n"))
 ###Resultate aus JSON auslesen 
 results <- get_results(json_data,i)
 
+#Daten simulieren Gemeinde!!!
+for (a in 1:163) { #nrow(results)
+
+results$gebietAusgezaehlt[a] = TRUE
+
+results$jaStimmenAbsolut[a] <- sample(0:10000,1)
+results$neinStimmenAbsolut[a] <- sample(0:10000,1)
+results$gueltigeStimmen[a] <- results$jaStimmenAbsolut[a] + results$neinStimmenAbsolut[a]
+results$jaStimmenInProzent[a] <- results$jaStimmenAbsolut[a]*100/results$gueltigeStimmen[a]
+
+}
+
 #Daten anpassen Gemeinden
 results <- treat_gemeinden(results)
 results <- format_data_g(results)
 
 #Kantonsdaten hinzufügen
 results_kantone <- get_results(json_data,i,"cantonal")
+
+#Daten simulieren Kantone!!!
+for (b in 1) {
+
+results_kantone$gebietAusgezaehlt[b] <- TRUE
+results_kantone$jaStimmenInProzent[b] <- runif(1,0,100)
+
+}
 
 Ja_Stimmen_Kanton <- results_kantone %>%
   select(Kantons_Nr,jaStimmenInProzent) %>%

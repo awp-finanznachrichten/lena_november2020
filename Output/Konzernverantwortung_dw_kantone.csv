@@ -1,5 +1,5 @@
 "Kantons_Nr","Kanton_d","Kanton_f","Ja_Stimmen_In_Prozent_Kanton","Nein_Stimmen_In_Prozent_Kanton","Text_de","Text_fr"
-1,"Zürich","Zurich",50,,"Die Resultate von diesem Kanton sind noch nicht bekannt.","Les résultats ne sont pas encore connus dans ce canton."
+1,"Zürich","Zurich",22.1,77.9,"Ja-Anteil: 22.1 % <br>Nein-Anteil: 77.9 %","pourcentage de oui: 22.1 % <br>pourcentage de non: 77.9 %"
 2,"Bern","Berne",50,,"Die Resultate von diesem Kanton sind noch nicht bekannt.","Les résultats ne sont pas encore connus dans ce canton."
 3,"Luzern","Lucerne",50,,"Die Resultate von diesem Kanton sind noch nicht bekannt.","Les résultats ne sont pas encore connus dans ce canton."
 4,"Uri","Uri",50,,"Die Resultate von diesem Kanton sind noch nicht bekannt.","Les résultats ne sont pas encore connus dans ce canton."
