@@ -26,7 +26,7 @@ cat(paste0("\nErmittle Daten für folgende Vorlage: ",vorlagen$text[i],"\n"))
 results <- get_results(json_data,i)
 
 #Emergency adapt
-results$gebietAusgezaehlt[155] <- TRUE
+#results$gebietAusgezaehlt[155] <- TRUE
 results$gebietAusgezaehlt[911] <- TRUE
 results$gebietAusgezaehlt[912] <- TRUE
 results$gebietAusgezaehlt[913] <- TRUE
