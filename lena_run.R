@@ -95,18 +95,18 @@ results <- hist_storyfinder(results)
 #Vergleich innerhalb des Kantons (falls alle Daten vom Kanton vorhanden)
 
 #Check Vorlagen-ID
-if (vorlagen$id[i] == "6360") { #6310
+#if (vorlagen$id[i] == "6360") { #6310
   
 
 #Falls mindestens ein Kanton ausgezählt -> Stories für die Kantone finden
   
-if (sum(results_kantone$gebietAusgezaehlt) > 0) {
+#if (sum(results_kantone$gebietAusgezaehlt) > 0) {
   
-results <- kanton_storyfinder(results)
+#results <- kanton_storyfinder(results)
 
-}
+#}
 
-}
+#}
 
 
 
