@@ -197,8 +197,12 @@ if (is.na(output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]) == TRUE) {
   output_dw_kantone$Text_fr[y] <- "Les résultats ne sont pas encore connus dans ce canton."
 } else {
   
+  count_gemeinden <- nrow(results[results$Kantons_Nr == output_dw_kantone$Kantons_Nr[y],])
+  counted <- nrow(results[results$Kantons_Nr == output_dw_kantone$Kantons_Nr[y] & results$Gebiet_Ausgezaehlt == TRUE,])
+  
   output_dw_kantone$Text_de[y] <- paste0("Ja-Anteil: ",output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]," % <br>",
-                                      "Nein-Anteil: ",output_dw_kantone$Nein_Stimmen_In_Prozent_Kanton[y]," %")
+                                      "Nein-Anteil: ",output_dw_kantone$Nein_Stimmen_In_Prozent_Kanton[y]," %<br><br>",
+                                      "Es sind ",counted," von ",count_gemeinden, " Gemeinden ausgezählt")
   output_dw_kantone$Text_fr[y] <- paste0("pourcentage de oui: ",output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]," % <br>",
                                          "pourcentage de non: ",output_dw_kantone$Nein_Stimmen_In_Prozent_Kanton[y]," %") 
   
