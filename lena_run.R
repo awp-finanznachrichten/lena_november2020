@@ -206,6 +206,7 @@ if (is.na(output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]) == TRUE) {
   
 }  
 
+
 write.csv(output_dw_kantone,paste0("Output/",vorlagen_short[i],"_dw_kantone.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
 
 cat(paste0("\nGenerated output for Vorlage ",vorlagen_short[i],"\n"))
