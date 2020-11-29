@@ -204,7 +204,8 @@ if (is.na(output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]) == TRUE) {
                                       "Nein-Anteil: ",output_dw_kantone$Nein_Stimmen_In_Prozent_Kanton[y]," %<br><br>",
                                       "Es sind ",counted," von ",count_gemeinden, " Gemeinden ausgezählt")
   output_dw_kantone$Text_fr[y] <- paste0("pourcentage de oui: ",output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]," % <br>",
-                                         "pourcentage de non: ",output_dw_kantone$Nein_Stimmen_In_Prozent_Kanton[y]," %") 
+                                         "pourcentage de non: ",output_dw_kantone$Nein_Stimmen_In_Prozent_Kanton[y]," %<br><br>",
+                                         "Les résultats de ",counted," des ",count_gemeinden, " communes sont connus") 
   
 }  
   
