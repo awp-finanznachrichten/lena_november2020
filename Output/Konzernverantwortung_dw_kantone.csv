@@ -1,5 +1,5 @@
 "Kantons_Nr","Kanton_d","Kanton_f","Ja_Stimmen_In_Prozent_Kanton","Nein_Stimmen_In_Prozent_Kanton","Text_de","Text_fr"
-1,"Zürich","Zurich",49,51,"Ja-Anteil: 49 % <br>Nein-Anteil: 51 %<br><br>Es sind 161 von 162 Gemeinden ausgezählt","pourcentage de oui: 49 % <br>pourcentage de non: 51 %<br><br>Les résultats de 161 des 162 communes sont connus"
+1,"Zürich","Zurich",49.7,50.3,"Ja-Anteil: 49.7 % <br>Nein-Anteil: 50.3 %<br><br>Es sind 161 von 162 Gemeinden ausgezählt","pourcentage de oui: 49.7 % <br>pourcentage de non: 50.3 %<br><br>Les résultats de 161 des 162 communes sont connus"
 2,"Bern","Berne",50.1,49.9,"Ja-Anteil: 50.1 % <br>Nein-Anteil: 49.9 %<br><br>Es sind 264 von 338 Gemeinden ausgezählt","pourcentage de oui: 50.1 % <br>pourcentage de non: 49.9 %<br><br>Les résultats de 264 des 338 communes sont connus"
 3,"Luzern","Lucerne",44.1,55.9,"Ja-Anteil: 44.1 % <br>Nein-Anteil: 55.9 %<br><br>Es sind 82 von 82 Gemeinden ausgezählt","pourcentage de oui: 44.1 % <br>pourcentage de non: 55.9 %<br><br>Les résultats de 82 des 82 communes sont connus"
 4,"Uri","Uri",41.5,58.5,"Ja-Anteil: 41.5 % <br>Nein-Anteil: 58.5 %<br><br>Es sind 20 von 20 Gemeinden ausgezählt","pourcentage de oui: 41.5 % <br>pourcentage de non: 58.5 %<br><br>Les résultats de 20 des 20 communes sont connus"
