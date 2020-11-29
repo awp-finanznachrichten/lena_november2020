@@ -25,6 +25,11 @@ cat(paste0("\nErmittle Daten für folgende Vorlage: ",vorlagen$text[i],"\n"))
 ###Resultate aus JSON auslesen 
 results <- get_results(json_data,i)
 
+#Emergency adapt
+results$gebietAusgezaehlt[911] <- TRUE
+results$gebietAusgezaehlt[912] <- TRUE
+results$gebietAusgezaehlt[913] <- TRUE
+
 #Daten anpassen Gemeinden
 results <- treat_gemeinden(results)
 results <- format_data_g(results)
