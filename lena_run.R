@@ -26,6 +26,7 @@ cat(paste0("\nErmittle Daten für folgende Vorlage: ",vorlagen$text[i],"\n"))
 results <- get_results(json_data,i)
 
 #Emergency adapt
+results$gebietAusgezaehlt[155] <- TRUE
 results$gebietAusgezaehlt[911] <- TRUE
 results$gebietAusgezaehlt[912] <- TRUE
 results$gebietAusgezaehlt[913] <- TRUE
@@ -221,8 +222,6 @@ write.csv(output_dw_kantone,paste0("Output/",vorlagen_short[i],"_dw_kantone.csv"
 
 cat(paste0("\nGenerated output for Vorlage ",vorlagen_short[i],"\n"))
 }
-
-
 
 
 ###Kantonale Abstimmungen###
