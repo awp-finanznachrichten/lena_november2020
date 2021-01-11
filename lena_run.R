@@ -181,8 +181,12 @@ output_dw <- rbind(output_dw,gemeinde_adapt)
 gemeinde_adapt$Gemeinde_Nr[1] <- 5135
 output_dw <- rbind(output_dw,gemeinde_adapt)
 
+#Runden
+output_dw$Ja_Stimmen_In_Prozent <- round(output_dw$Ja_Stimmen_In_Prozent,1)
+
+
 #Output speichern
-write.csv(output_dw,paste0("Output/",vorlagen_short[i],"_dw.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(output_dw,paste0("Test/",vorlagen_short[i],"_dw.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
 
 
 #Output Abstimmungen Kantone
@@ -218,7 +222,7 @@ if (is.na(output_dw_kantone$Ja_Stimmen_In_Prozent_Kanton[y]) == TRUE) {
 }  
 
 
-write.csv(output_dw_kantone,paste0("Output/",vorlagen_short[i],"_dw_kantone.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(output_dw_kantone,paste0("Test/",vorlagen_short[i],"_dw_kantone.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
 
 cat(paste0("\nGenerated output for Vorlage ",vorlagen_short[i],"\n"))
 }
@@ -346,7 +350,7 @@ for (k in 1:length(kantonal_short) ) {
     select(Gemeinde_Nr,Ja_Stimmen_In_Prozent,Gemeinde_KT_d,Gemeinde_KT_f,Text_d,Text_f)
   
   
-  write.csv(output_dw,paste0("Output/",kantonal_short[k],"_dw.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
+  write.csv(output_dw,paste0("Test/",kantonal_short[k],"_dw.csv"), na = "", row.names = FALSE, fileEncoding = "UTF-8")
   
   cat(paste0("\nGenerated output for Vorlage ",kantonal_short[k],"\n"))
   
